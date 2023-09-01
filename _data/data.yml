@@ -9,7 +9,7 @@ sidebar:
 
     # Profile information
     name: Hyunsu Bong
-    tagline: Convergence Software Bioinformatics
+    tagline: Software Convergence Bioinformatics
     avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -71,7 +71,7 @@ career-profile:
 education:
     title: Education
     info:
-      - degree: Undergraduate in Convergence Software
+      - degree: Undergraduate in Software Convergence
         university: Myongji University
         time: 2020 - PRESENT
         details: |
