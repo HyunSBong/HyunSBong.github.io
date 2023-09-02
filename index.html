@@ -1,23 +1,312 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
 
+    <!-- begin SEO -->
 
-{% include career-profile.html %}
+    <title>Hyunsu Bong - Homepage</title>
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content="Hyunsu Bong" />
+    <meta property="og:title" content="Hyunsu Bong" />
+    <link rel="canonical" href="https://hyunsbong.github.io/" />
+    <meta property="og:url" content="https://hyunsbong.github.io/" />
 
-{% include experiences.html %}
+    <meta
+      property="og:description"
+      content="Focusing on machine learning in personalized medicine."
+    />
 
-{% include certifications.html %}
+    <!-- end SEO -->
 
-{% include projects.html %}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{% include oss-contributions.html %}
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+    </script>
 
-{% include publications.html %}
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-{% include skills.html %}
+    <meta http-equiv="cleartype" content="on" />
+    <head>
+      <base target="_blank" />
+    </head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
 
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta
+      name="msapplication-TileImage"
+      content="images/mstile-144x144.png?v=M44lzPylqQ"
+    />
+    <meta
+      name="msapplication-config"
+      content="images/browserconfig.xml?v=M44lzPylqQ"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="assets/css/academicons.css" />
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } });
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"
+      async
+    ></script>
+
+    <!-- end custom head snippets -->
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button><div class="navicon"></div></button>
+            <ul class="visible-links">
+              <li
+                class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"
+              >
+                <a href="#about-me">Homepage</a>
+              </li>
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="http://schema.org/Person" class="profile_box">
+          <div class="author__avatar">
+            <img
+              src="images/profile.jpeg"
+              class="author__avatar"
+              alt="Hyunsu Bong"
+            />
+          </div>
+
+          <div class="author__content">
+            <h3 class="author__name">Hyunsu Bong</h3>
+            <p class="author__bio">Myongji University</p>
+          </div>
+
+          <div class="author__urls-wrapper">
+            <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
+            <ul class="author__urls social-icons">
+              <li>
+                <div style="white-space: normal; margin-bottom: 1em">
+                  Deep Learning <br/> 
+                  Bioinformatics <br/> 
+                  Graph Learning <br/> 
+                  Pathway Learning <br/> 
+                  Personalized Medicine <br/>
+                </div>
+              </li>
+
+              <li>
+                <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Seoul,
+                South Korea
+              </li>
+
+              <li>
+                <a href="mailto:sanseng@mju.ac.kr"
+                  ><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
+                  Email</a
+                >
+              </li>
+
+              <li>
+                <a href="https://github.com/hyunsbong"
+                  ><i class="fab fa-fw fa-github" aria-hidden="true"></i>
+                  Github</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?user=XH3hXcoAAAAJ&hl"
+                  ><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a
+                >
+              </li>
+            </ul>
+            <div class="author__urls_sm">
+              <a href="mailto:sanseng@mju.ac.kr"
+                ><i class="fas fa-fw fa-envelope" aria-hidden="true"></i
+              ></a>
+
+              <a href="https://github.com/hyunsbong"
+                ><i class="fab fa-fw fa-github" aria-hidden="true"></i
+              ></a>
+
+              <a
+                href="https://scholar.google.com/citations?user=XH3hXcoAAAAJ&hl"
+                ><i class="fas fa-fw fa-graduation-cap"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="" />
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">
+            <p>
+              <span class="anchor" id="about-me"></span>
+              👋 Hi there! My name is Hyunsu Bong, and I am a undergraduate
+              student in software convergenece at Myongji University (MJU).
+              <!-- Currently, I am pursuing a Doctoral degree and
+              working with -->
+              <!-- <a href="https://"
+                >Professor </a
+              >
+              in the Lab at MJU. -->
+            </p>
+
+            <p>
+              My research interests are transcriptional generation models and
+              multi-omics integrated analysis to analyze the conditions of
+              several cells that cause cancer in terms of gene expression. I
+              have focused on graph based machine learning, contrastive
+              learning, and causal inference accurately analyze omics data.
+            </p>
+
+            <!-- News -->
+            <h1 id="-news">🎉🎉 News</h1>
+            <ul>
+              <li>
+                <em>2023.09</em>: Joined Korea University College of
+                Medicine conducts medical science as research intern from
+                September 5, 2023.
+              </li>
+            </ul>
+
+            <!-- Publications -->
+            <h1 id="-publications">📝 Publications</h1>
+
+            <ul>
+              <li>
+                <code class="language-plaintext highlighter-rouge"
+                  >MAY 2023</code
+                >
+                <!-- <span style="color:red">(Long paper)</span> -->
+                <a href="https://doi.org/10.5909/JBE.2023.28.3.275"
+                  >Conditional Variational Autoencoder-based Generative Model
+                  for Gene Expression Data Augmentation</a
+                >
+                <br />
+                <strong>Hyunsu Bong</strong>, Minsik Oh
+                <br />
+                <span style="color: gray">
+                  Korean Institute of Broadcast and Media Engineers, 28(3), 2023
+                </span>
+              </li>
+            </ul>
+
+            <!-- Experiences -->
+            <h1 id="-news">🚀 Experiences</h1>
+            <ul>
+              <li>
+                <em>2023.09 ~ PRESENT</em>: Research Intern
+                <br />
+                <span style="color: gray">MedAI LAB, Korea University</span>
+              </li>
+              <li>
+                <em>2022.09 ~ PRESENT</em>: Undergraduate Research Trainees
+                <br />
+                <span style="color: gray"
+                  >Artificial Intelligence and Data Analytics LAB, Myongji
+                  University</span
+                >
+              </li>
+            </ul>
+
+            <h1 id="-publications">🎓 Educations</h1>
+
+            <ul>
+              <li>
+                <em>2020.03 ~ PRESENT</em>: Software Convergence majoring in
+                Data Technology (Myongji University)
+              </li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <script src="assets/js/main.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "");
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        var gsDataBaseUrl =
+          "https://raw.githubusercontent.com/hyunsbong/hyunsbong.github.io/";
+
+        $.getJSON(
+          gsDataBaseUrl + "google-scholar-stats/gs_data.json",
+          function (data) {
+            var totalCitation = data["citedby"];
+            document.getElementById("total_cit").innerHTML = totalCitation;
+            var citationEles = document.getElementsByClassName(
+              "show_paper_citations"
+            );
+            Array.prototype.forEach.call(citationEles, (element) => {
+              var paperId = element.getAttribute("data");
+              var numCitations = data["publications"][paperId]["num_citations"];
+              element.innerHTML = "| Citations: " + numCitations;
+            });
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
