@@ -1,379 +1,276 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VDQYT4DES"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-4VDQYT4DES');
-    </script>
+---
+layout: default
+title: Home
+---
+<!-- ========== BIO ========== -->
+<div class="docs-section" id="bio">
+  <h4>Bio</h4>
 
-    <!-- begin SEO -->
+  <p>
+    👋 Hi there! my name is Hyunsu Bong, and doctoral integration student in biomedical sciences at Korea University. I received my Bachelor’s degree in Software Convergence from Myongji University.
+  </p> 
+  <p>
+    My research interest is to develop drug candidates into computational methods by utilizing various biodomain data such as genomes, proteomes, and 3D protein-ligand structure information.
+    Specifically, protein-ligand binding prediction using three-dimensional structural information, 
+    three-dimensional molecule that can be drug candidates, and gene and microbe prediction that can cause specific diseases.
+  </p>
+</div>
 
-    <title>Hyunsu Bong - Homepage</title>
+<!--
+<div class="docs-section" id="prospective-students">  
+  <h4>Prospective Students</h4>
+  <p>
+  <span style="display: inline-block; margin-bottom: 5px">
+    <b>I'm recruiting PhD students to start Fall 2025 at the University of Washington!</b> 
+  </span>
+  <br/> 
+  <span style="display: inline-block; margin-bottom: 5px">
+    I'm looking for students passionate about developing new <u>social media algorithms</u>, both broadly and within the scope of this <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2403434" target="_blank">NSF grant</a> (collaboration with Stanford and Northwestern). For other examples, please see my recent publications. <br/>
+  </span>
+  <span style="display: inline-block; margin-bottom: 5px">
+    Students with strong technical skills and background or interest in social network analysis, machine learning, causal inference, or natural language processing would be a great fit.
+  </span>
+  <br/>
+  <span style="display: inline-block; margin-bottom: 5px">
+    If you are interested, please apply to the UW iSchool <a href="https://ischool.uw.edu/programs/phd/admissions" target="_blank">PhD program</a> and mention me in your application.
+  </span>
+  <br/>
+  <span>
+    If you have any questions, feel free to reach out.
+  </span>
+  </p> 
+</div>
+-->
 
-    <meta property="og:locale" content="en" />
-    <meta property="og:site_name" content="Hyunsu Bong" />
-    <meta property="og:title" content="Hyunsu Bong" />
-    <link rel="canonical" href="https://hyunsbong.github.io/" />
-    <meta property="og:url" content="https://hyunsbong.github.io/" />
+<!-- ========== PUBLICATIONS ========== -->
+<div class="docs-section" id="publications">
+  <h4>Publications</h4>
 
-    <meta
-      property="og:description"
-      content="Focusing on machine learning in personalized medicine."
-    />
+  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
+  <sup>‡</sup> indicates equal contribution.
+  </p>
 
-    <!-- end SEO -->
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
+    <li><div class="button" data-ref="#papers-all">Comp Bio</div></li>
+    <li><div class="button" data-ref="#papers-all">All</div></li>
+  </ul>
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <div class="tab-content">
+    <div class="tab-pane active" id="papers-selected">
+      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+      {% for paper in selected_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
 
-    <script>
-      document.documentElement.className =
-        document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
-    </script>
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
 
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
 
-    <meta http-equiv="cleartype" content="on" />
-    <head>
-      <base target="_blank" />
-    </head>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/site.webmanifest" />
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
 
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta
-      name="msapplication-TileImage"
-      content="images/mstile-144x144.png?v=M44lzPylqQ"
-    />
-    <meta
-      name="msapplication-config"
-      content="images/browserconfig.xml?v=M44lzPylqQ"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="assets/css/academicons.css" />
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } });
-    </script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          processEscapes: true
-        }
-      });
-    </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"
-      async
-    ></script>
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
 
-    <!-- end custom head snippets -->
-  </head>
-
-  <body>
-    <!--[if lt IE 9]>
-      <div class="notice--danger align-center" style="margin: 0">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-        your experience.
-      </div>
-    <![endif]-->
-    <div class="masthead">
-      <div class="masthead__inner-wrap">
-        <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
-            <button><div class="navicon"></div></button>
-            <ul class="visible-links">
-              <li
-                class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"
-              >
-                <a href="#about-me">Homepage</a>
-              </li>
-            </ul>
-            <ul class="hidden-links hidden"></ul>
-          </nav>
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
 
-    <div id="main" role="main">
-      <div class="sidebar sticky">
-        <div itemscope itemtype="http://schema.org/Person" class="profile_box">
-          <div class="author__avatar">
-            <img
-              src="images/profile.jpeg"
-              class="author__avatar"
-              alt="Hyunsu Bong"
-            />
-          </div>
+    <div class="tab-pane active" id="papers-Bio">
+      {% assign selected_papers = site.data.publications.papers | where: "bio", "y" %}
+      {% for paper in bio_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
 
-          <div class="author__content">
-            <h3 class="author__name">Hyunsu Bong</h3>
-            <p class="author__bio">Korea University</p>
-          </div>
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
 
-          <div class="author__urls-wrapper">
-            <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
-            <ul class="author__urls social-icons">
-              <li>
-                <div style="white-space: normal; margin-bottom: 1em">
-                  Deep Learning <br/> 
-                  Bioinformatics <br/> 
-                  Graph Learning <br/> 
-                  Generative Model <br/> 
-                  Personalized Medicine <br/>
-                  강아지 <br/>
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="tab-pane" id="papers-all">
+      {% for paper in site.data.publications.papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
+
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- ========== PROJECTS ========== 
+<div class="docs-section" id="projects">
+  <h4>Projects</h4>
+
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#projects-selected">Selected</div></li>
+    <li><div class="button" data-ref="#projects-all">All</div></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="projects-selected">
+      {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
+      {% for project in selected_projects %}
+        {% assign index_modulo = forloop.index0 | modulo:3 %}
+        {% if index_modulo == 0 %}
+          <div class="row">
+        {% endif %}
+
+          <div class="four columns">
+            <div class="project-container">
+
+                <div class="project-image-container">
+                  <a href="{{ project.url }}">
+                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+                  </a>
                 </div>
-              </li>
 
-              <li>
-                <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Seoul,
-                South Korea
-              </li>
+                <div class="project-caption">
+                  <b>{{ project.title }}</b> <br/>
+                  {{ project.subtitle }}
+                </div>
 
-              <li>
-                <a href="mailto:sanseng@korea.ac.kr"
-                  ><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
-                  Email</a
-                >
-              </li>
-
-              <li>
-                <a href="https://github.com/hyunsbong"
-                  ><i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                  Github</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="https://scholar.google.com/citations?user=XH3hXcoAAAAJ&hl"
-                  ><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a
-                >
-              </li>
-            </ul>
-            <div class="author__urls_sm">
-              <a href="mailto:sanseng@korea.ac.kr"
-                ><i class="fas fa-fw fa-envelope" aria-hidden="true"></i
-              ></a>
-
-              <a href="https://github.com/hyunsbong"
-                ><i class="fab fa-fw fa-github" aria-hidden="true"></i
-              ></a>
-
-              <a
-                href="https://scholar.google.com/citations?user=XH3hXcoAAAAJ&hl"
-                ><i class="fas fa-fw fa-graduation-cap"></i
-              ></a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="" />
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-            <p>
-              <span class="anchor" id="about-me"></span>
-              👋 Hi there! my name is Hyunsu Bong, and doctoral integration student in biomedical sciences at Korea University.
-              I received my Bachelor’s degree in Software Convergence from Myongji University.
-              <!-- Currently, I am pursuing a Doctoral degree and
-              working with -->
-              <!-- <a href="https://"
-                >Professor </a
-              >
-              in the Lab at MJU. -->
-            </p>
-
-            <p>
-              My research interest is to develop drug candidates into computational methods by utilizing various biodomain data such as genomes, 
-              proteomes, and 3D protein-ligand structure information.
-              Specifically, protein-ligand binding prediction using three-dimensional structural information, 
-              three-dimensional molecule that can be drug candidates, and gene and microbe prediction that can cause specific diseases.
-            </p>
-
-            <!-- News -->
-            <h1 id="-news">🎉🎉 News</h1>
-            <ul>
-              <li>
-                <em>2024.07</em>: Our work is accepted by Journal of Computational Chemistry 2024. (Congratulation~)
-              </li>
-            </ul>
-
-            <!-- Publications -->
-            <h1 id="-publications">📝 Publications</h1>
-
-            <ul>
-              <li>
-                <code class="language-plaintext highlighter-rouge"
-                  >Preprint</code
-                >
-                <!-- <span style="color:red">(Long paper)</span> -->
-                <a href="https://www.biorxiv.org/content/10.1101/2025.07.14.664646v1.abstract"
-                  >ATOMIC: A graph attention neural network for ATOpic dermatitis prediction on human gut MICrobiome</a
-                >
-                <br />
-                <strong>Hyunsu Bong*</strong>, Joonhong Min*, Songhyeon Kim, Wootaek Lim, Dongyoung Lim, Hyunjeong Eom, Young Her, Minji Jeon
-                <br />
-                <span style="color: gray">
-                  bioRxiv, 2025
-                </span>
-              </li>
-              <li>
-                <code class="language-plaintext highlighter-rouge"
-                  >BMC Bioinformatics. 2024</code
-                >
-                <!-- <span style="color:red">(Long paper)</span> -->
-                <a href="https://dtmbio.net"
-                  >DR.DEGMON: Self-explainable deep neural network for drug-induced cell viability prediction incorporating differentially expressed genes and Gene Ontology</a
-                >
-                <br />
-                Wootaek Lim, Jitae Kim, Songhyeon Kim, <strong>Hyunsu Bong</strong>, Kwang-su Park, Minji Jeon
-                <br />
-                <span style="color: gray">
-                  The 18th International Conference on Data and Text Mining in Biomedical Informatics, 2024
-                </span>
-              </li>
-              <li>
-                <code class="language-plaintext highlighter-rouge"
-                  >J. Comput. Chem. 2024</code
-                >
-                <!-- <span style="color:red">(Long paper)</span> -->
-                <a href="https://doi.org/10.1002/jcc.27469"
-                  >Dr.Emb Appyter: A Web Platform for Drug Discovery using Embedding Vectors</a
-                >
-                <br />
-                Songhyeon Kim, <strong>Hyunsu Bong</strong>, Minji Jeon
-                <br />
-                <span style="color: gray">
-                  Journal of Computational Chemistry, 2024
-                </span>
-              </li>
-              <li>
-                <code class="language-plaintext highlighter-rouge"
-                  >JBE 2023</code
-                >
-                <!-- <span style="color:red">(Long paper)</span> -->
-                <a href="https://doi.org/10.5909/JBE.2023.28.3.275"
-                  >Conditional Variational Autoencoder-based Generative Model
-                  for Gene Expression Data Augmentation</a
-                >
-                <br />
-                <strong>Hyunsu Bong</strong>, Minsik Oh
-                <br />
-                <span style="color: gray">
-                  Korean Institute of Broadcast and Media Engineers, 28(3), 2023
-                </span>
-              </li>
-            </ul>
-
-            <!-- Experiences -->
-            <h1 id="-news">🚀 Experiences</h1>
-            <ul>
-              <li>
-                <em>2023.09 ~ 2024.02</em>: Undergraduate Research Trainees
-                <br />
-                <span style="color: gray">Korea University</span>
-              </li>
-              <li>
-                <em>2022.09 ~ 2023.08</em>: Undergraduate Research Trainees
-                <br />
-                <span style="color: gray"
-                  >Artificial Intelligence and Data Analytics LAB, Myongji
-                  University</span
-                >
-              </li>
-              <li>
-                <em></em>: Cloud Architecture
-                <br />
-                <span style="color: gray"
-                  >CNS, LG</span
-                >
-              </li>
-              
-            </ul>
-
-            <h1 id="-publications">🎓 Educations</h1>
-
-            <ul>
-              <li>
-                <em>2024.03 ~ PRESENT</em>:, MS and Ph.D. Student in Biomedical Sciences
-                <br />
-                <span style="color: gray">Korea University - Department of Medicine, College of Medicine</span>
-              </li>
-              <li>
-                <em>2020.03 ~ 2024.02</em>: Software Convergence majoring in
-                Data Technology 
-                <br />
-                <span style="color: gray">Myongji University - School of Software Convergence</span>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </article>
+        {% if index_modulo == 2 %}
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
 
-    <script src="assets/js/main.min.js"></script>
+    <div class="tab-pane" id="projects-all">
+      {% for project in site.data.projects.projects %}
+        {% assign index_modulo = forloop.index0 | modulo:3 %}
+        {% if index_modulo == 0 %}
+          <div class="row">
+        {% endif %}
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+          <div class="four columns">
+            <div class="project-container">
 
-      gtag("config", "");
-    </script>
+                <div class="project-image-container">
+                  <a href="{{ project.url }}">
+                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+                  </a>
+                </div>
 
-    <script>
-      $(document).ready(function () {
-        var gsDataBaseUrl =
-          "https://raw.githubusercontent.com/hyunsbong/hyunsbong.github.io/";
+                <div class="project-caption">
+                  <b>{{ project.title }}</b> <br/>
+                  {{ project.subtitle }}
+                </div>
 
-        $.getJSON(
-          gsDataBaseUrl + "google-scholar-stats/gs_data.json",
-          function (data) {
-            var totalCitation = data["citedby"];
-            document.getElementById("total_cit").innerHTML = totalCitation;
-            var citationEles = document.getElementsByClassName(
-              "show_paper_citations"
-            );
-            Array.prototype.forEach.call(citationEles, (element) => {
-              var paperId = element.getAttribute("data");
-              var numCitations = data["publications"][paperId]["num_citations"];
-              element.innerHTML = "| Citations: " + numCitations;
-            });
-          }
-        );
-      });
-    </script>
-  </body>
-</html>
+            </div>
+          </div>
+
+        {% if index_modulo == 2 %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+-->
+
+<!-- ========== RESUME ========== -->
+<div class="docs-section" id="resume">
+  <h4>Resume</h4>
+
+  <!-- The Timeline -->
+  <ul class="timeline">
+    {% for exp in site.data.experience.experiences %}
+    <li>
+      {% if exp.category == "work" %}
+      <div class="direction-l">
+      {% else %}
+      <div class="direction-r">
+      {% endif %}
+        <div class="flag-wrapper">
+          <span class="flag">{{ exp.place }}</span>
+          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+        </div>
+        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="docs-section" id="ack">
+  <h4>Acknowledgement</h4>
+  <p>
+    This website uses the website design and template by <a href="https://github.com/msaveski/www_personal">Martin Saveski</a>
+  </p>
+</div>  

@@ -1,0 +1,25 @@
+experiences:
+
+- place: "Korea University"
+  time: "2024.2 - now"
+  title: "MS and Ph.D. Student"
+  subtitle: "Biomedical Sciences. Advised by Prof. Minji Jeon"
+  category: "school"
+
+- place: "Korea University"
+  time: "2023.9 - 2024.2"
+  title: "Undergraduate Research Trainees"
+  subtitle: "Medical Science via Artificial Intelligence Lab, Department of Medicine"
+  category: "work"
+
+- place: "Myongji University"
+  time: "2022.9 - 2023.8"
+  title: "Undergraduate Research Trainees"
+  subtitle: "Artificial Intelligence and Data Analytics Lab, School of Software Convergence"
+  category: "work"
+
+- place: "Myongji University"
+  time: "2020 - 2023"
+  title: "B.S. Student"
+  subtitle: "Software Convergence majoring in Data Technology"
+  category: "school"

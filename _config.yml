@@ -1,7 +1,8 @@
-# Analytics
-analytics:
-  provider               : "google-gtag" 
-                          # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : "G-4VDQYT4DES"
-    anonymize_ip         : # true, false (default)
+source:      .
+destination: ./_site
+includes:    ./_includes
+baseurl: /msaveski
+
+collections:
+  projects:
+    output: true
