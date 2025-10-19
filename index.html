@@ -47,7 +47,7 @@ title: Home
   <h4>Publications</h4>
 
   <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
-  <sup>‡</sup> indicates equal contribution.
+  <sup>*</sup> indicates equal contribution.
   </p>
 
   <ul class="tab-nav">
@@ -77,14 +77,14 @@ title: Home
               <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
             {% endif %}
 
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
-
             {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
             {% endif %}
 
+            {% if paper.site %}
+              <a class="button" href="{{ paper.site }}" target="_blank">Site</a>
+            {% endif %}
+            
             {% if paper.data %}
               <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
             {% endif %}
@@ -243,6 +243,17 @@ title: Home
 
 </div>
 -->
+
+<div class="docs-section" id="teaching">
+  <h4>Teaching</h4>
+  {% assign current_classes = site.data.classes.classes | where: "category", "current" %}
+  {% for class in current_classes %}
+  <div class="class">
+    <!-- <p class="title"><b>{{ class.name }}</b> ({{ class.time }}): <a href={{class.link}} target="_blank">{{ class.title }}</a></p> -->
+    <p class="title"><b>{{ class.name }}</b> ({{ class.time }}) <br/> {{ class.title }} <br/> {{ class.course }} <br/> Instructor: {{ class.instructor }}
+  </div>
+  {% endfor %}
+</div>
 
 <!-- ========== RESUME ========== -->
 <div class="docs-section" id="resume">

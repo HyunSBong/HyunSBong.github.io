@@ -1,0 +1,36 @@
+classes:
+
+    - name: "Biomedical Database"
+      time: "Fall 2024"
+      title: "Understanding the Biomedical Database"
+      course: Graduate Course
+      instructor: "Prof. Minji Jeon"
+      category: "current"
+
+    - name: "Introduction to Transformers"
+      time: "Winter 2024"
+      title: "Bioinformatics and Machine Learning Workshop 2024"
+      course: Workshop (Seoul National University)
+      instructor: "Prof. Minji Jeon"
+      category: "current"
+
+    - name: "Big Data Programming"
+      time: "Fall 2023"
+      title: "Distributed Data-Parallel Computing"
+      course: Undergraduate Course
+      instructor: "Prof. Minsik Oh"
+      category: "current"
+
+    - name: "Mobile Computing"
+      time: "Spring 2023"
+      title: "Understanding the Android Operating System"
+      course: Undergraduate Course
+      instructor: "Prof. Minsik Oh"
+      category: "current"
+
+    - name: "Big Data Programming"
+      time: "Fall 2022"
+      title: "Distributed Data-Parallel Computing"
+      course: Undergraduate Course
+      instructor: "Prof. Minsik Oh"
+      category: "current"
