@@ -6,13 +6,20 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
-  <meta name="description" content="Martin Saveski">
-  <meta name="author" content="Martin Saveski">
-  <meta property="og:title" content="Martin Saveski" />
+  <meta name="description" content="{{ site.data.main_info.name }} - {{ site.data.main_info.title }}">
+  <meta name="author" content="{{ site.data.main_info.name }}">
+  <meta property="og:title" content="{{ site.data.main_info.name }}" />
+  <meta property="og:description" content="{{ site.data.main_info.title }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.martinsaveski.com" />
-  <meta property="og:site_name" content="Martin Saveski" />
-  <link rel="canonical" href="http://www.martinsaveski.com" />
+  <meta property="og:url" content="https://hyunsbong.github.io" />
+  <meta property="og:site_name" content="{{ site.data.main_info.name }}" />
+  <meta property="og:image" content="https://hyunsbong.github.io{{ site.data.main_info.profile_pic }}" />
+  <meta property="og:image:alt" content="{{ site.data.main_info.name }} profile picture" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ site.data.main_info.name }}" />
+  <meta name="twitter:description" content="{{ site.data.main_info.title }}" />
+  <meta name="twitter:image" content="https://hyunsbong.github.io{{ site.data.main_info.profile_pic }}" />
+  <link rel="canonical" href="https://hyunsbong.github.io" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
