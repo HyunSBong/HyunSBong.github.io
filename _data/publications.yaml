@@ -1,15 +1,23 @@
 papers:
 
-  - title: "ATOMIC: A graph attention neural network for ATOpic dermatitis prediction on human gut MICrobiome"
-    authors: "<b>Hyunsu Bong*</b>, Joonhong Min*, Songhyeon Kim, Wootaek Lim, Dongyoung Lim, Hyunjeong Eom, Young Her, Minji Jeon"
-    venue: "BioRxiv'25: arXiv preprint. 2025."
-    paper_pdf: "https://www.biorxiv.org/content/10.1101/2025.07.14.664646v1.abstract"
+  - title: "ATOMIC: a graph attention network for atopic dermatitis prediction using human gut microbiome"
+    authors: "<b>Hyunsu Bong†</b>, Joonhong Min†, Songhyeon Kim, Wootaek Lim, Dongyoung Lim, Hyunjeong Eom, Young Her, Minji Jeon*"
+    venue: "Frontiers in Immunology. 2025."
+    paper_pdf: "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1670993/abstract"
     code: "https://github.com/KU-MedAI/ATOMIC"
     selected: y
     bio: y
+    
+  - title: "ATOMIC: A graph attention neural network for ATOpic dermatitis prediction on human gut MICrobiome"
+    authors: "<b>Hyunsu Bong†</b>, Joonhong Min†, Songhyeon Kim, Wootaek Lim, Dongyoung Lim, Hyunjeong Eom, Young Her, Minji Jeon*"
+    venue: "BioRxiv'25: arXiv preprint. 2025."
+    paper_pdf: "https://www.biorxiv.org/content/10.1101/2025.07.14.664646v1.abstract"
+    code: "https://github.com/KU-MedAI/ATOMIC"
+    selected: n
+    bio: y
 
   - title: "DR.DEGMON: Self-explainable deep neural network for drug-induced cell viability prediction incorporating differentially expressed genes and Gene Ontology"
-    authors: "Wootaek Lim, Jitae Kim, Songhyeon Kim, <b>Hyunsu Bong</b>, Kwang-su Park, Minji Jeon"
+    authors: "Wootaek Lim, Jitae Kim, Songhyeon Kim, <b>Hyunsu Bong</b>, Kwang-su Park, Minji Jeon*"
     venue: "The 18th International Conference on Data and Text Mining in Biomedical Informatics, 2024, Bangkok, Thailand"
     paper_pdf: "https://dtmbio.net/"
     code: "https://github.com/KU-MedAI/DR.DEGMON"
@@ -17,7 +25,7 @@ papers:
     bio: y
 
   - title: "Dr.Emb Appyter: A web platform for drug discovery using embedding vectors"
-    authors: "Songhyeon Kim*, <b>Hyunsu Bong*</b>, Minji Jeon"
+    authors: "Songhyeon Kim, <b>Hyunsu Bong</b>, Minji Jeon*"
     venue: "Journal of Computational Chemistry. 2024."
     paper_pdf: "https://onlinelibrary.wiley.com/doi/10.1002/jcc.27469"
     code: "https://github.com/KU-MedAI/The-Dr.Emb-Appyter"
@@ -26,7 +34,7 @@ papers:
     bio: y
 
   - title: "Conditional Variational Autoencoder-based Generative Model for Gene Expression Data Augmentation"
-    authors: "<b>Hyunsu Bong*</b>, Minsik Oh"
+    authors: "<b>Hyunsu Bong†</b>, Minsik Oh*"
     venue: "Journal of Broadcast Engineering. 2023."
     paper_pdf: "https://www.ksbe-jbe.org/xml/37421/37421.pdf"
     code: "https://github.com/HyunSBong/CVAE-RNA-seq"
