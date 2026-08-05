@@ -1,13 +1,13 @@
 papers:
 
- - title: "DR. DEGMON: self-explainable deep neural network for drug-induced cell viability prediction incorporating differentially expressed genes and gene ontology"
+  - title: "DR. DEGMON: self-explainable deep neural network for drug-induced cell viability prediction incorporating differentially expressed genes and gene ontology"
     authors: "Wootaek Lim, Jitae Kim, Songhyeon Kim, <b>Hyunsu Bong</b>, Kwang-Su Park*, Minji Jeon*"
     venue: "BMC Medical Genomics 2026."
-    paper_pdf: ""
-    code: ""
+    paper_pdf: "https://link.springer.com/article/10.1186/s12920-026-02434-2"
+    code: "https://github.com/KU-MedAI/DR.DEGMON"
     selected: n
     bio: y
-
+    
   - title: "ATOMIC: a graph attention network for atopic dermatitis prediction using human gut microbiome"
     authors: "<b>Hyunsu Bong†</b>, Joonhong Min†, Songhyeon Kim, Wootaek Lim, Dongyoung Lim, Hyunjeong Eom*, Young Her*, Minji Jeon*"
     venue: "Frontiers in Immunology. 2026."
